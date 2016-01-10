@@ -4,7 +4,7 @@ Easily load and play (over and over again if you like) all or part of short(ish)
 
 Uses the Web Audio API when available (which supports precise play length and multiple instances of the
 same sound playing at once), otherwise falls back to HTML5 &lt;audio&gt; tags. If those aren't available either
-(Internet Explorer 8 and below, basically), a graceful degredation to silence occurs.
+(Internet Explorer 8 and below, basically), a graceful degradation to silence occurs.
 
 # API
 
