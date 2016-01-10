@@ -1,0 +1,13 @@
+{
+  "browser": "true",
+  "browserify": true,
+  "predef": ["Promise"],
+
+  "curly": false,
+  "latedef": true,
+  "quotmark": false,
+  "undef": true,
+  "unused": true,
+  "trailing": true,
+  "newcap": false
+}

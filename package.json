@@ -1,0 +1,25 @@
+{
+  "name": "audioclip",
+  "version": "0.1.0",
+  "description": "",
+  "main": "src/index.js",
+  "repository": "",
+  "author": "Scott Glazer",
+  "scripts": {
+    "lint": "jshint .",
+    "validate": "npm ls",
+    "preflight": "npm run validate && npm run lint",
+    "build-debug": "browserify --standalone AudioClip src/index.js > dist/audioclip.js",
+    "build-min": "browserify --standalone AudioClip src/index.js | uglifyjs -c -m > dist/audioclip-min.js",
+    "build": "rm -f dist/* && npm run preflight && npm run build-debug && npm run build-min",
+    "run-sample": "static -a 0.0.0.0 -H '{\"Cache-Control\": \"no-cache, must-revalidate\"}' sample"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "browserify": "^13.0.0",
+    "jshint": "^2.8.0",
+    "node-static": "^0.7.7",
+    "uglify-js": "^2.6.1"
+  },
+  "license": "MIT"
+}

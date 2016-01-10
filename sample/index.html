@@ -1,0 +1,17 @@
+<html>
+   <body>
+      <button id="ding">Ding</button> 
+      <button id="shortding">Short Ding</button>
+      
+      <script src="./audioclip-min.js"></script>
+      <script>
+         var clip = new window.AudioClip("./typewriter-bell.wav");
+         document.getElementById("ding").addEventListener("click", function() {
+            clip.play();
+         });
+         document.getElementById("shortding").addEventListener("click", function() {
+            clip.play(.2, .3);
+         });
+      </script>
+   </body>
+</html>
