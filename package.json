@@ -1,6 +1,6 @@
 {
   "name": "audioclip",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Easily load and play all or part of short audio files in the browser.",
   "main": "src/index.js",
   "repository": "https://github.com/scottglz/audioclip",
