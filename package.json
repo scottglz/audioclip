@@ -14,7 +14,9 @@
     "build": "rm -f dist/* && npm run preflight && npm run build-debug && npm run build-min",
     "run-sample": "static -a 0.0.0.0 -H '{\"Cache-Control\": \"no-cache, must-revalidate\"}' sample"
   },
-  "dependencies": {},
+  "dependencies": {
+    "es6-promise-polyfill": "^1.2.0"
+  },
   "devDependencies": {
     "browserify": "^13.0.0",
     "jshint": "^2.8.0",

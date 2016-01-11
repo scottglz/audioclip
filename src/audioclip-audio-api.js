@@ -1,5 +1,7 @@
 'use strict';
 
+var Promise = require('es6-promise-polyfill').Promise;
+
 var audioContext = new window.AudioContext();
 var speaker = audioContext.destination;
 
@@ -8,7 +10,7 @@ var AudioClip = function(url) {
    var request = new XMLHttpRequest();
    request.open("GET", url, true);
    request.responseType = "arraybuffer";
-   this.readyPromise = new Promise(function(resolve, reject) {
+   this.promise = new Promise(function(resolve, reject) {
       request.onload = function () {
          audioContext.decodeAudioData(request.response, function(buffer) {
             resolve(buffer);
@@ -27,7 +29,7 @@ var AudioClip = function(url) {
 AudioClip.prototype = {
    
    accessBuffer: function(callback, error) {
-      this.readyPromise.then(callback, error);
+      this.promise.then(callback, error);
    },
    
    play: function(start, length) {

@@ -1,7 +1,6 @@
 'use strict';
 
 var audioApiSupported = typeof AudioContext === "function" && 
-   typeof Promise === "function" &&
    typeof new XMLHttpRequest().responseType === "string";
  
 if (audioApiSupported) {
